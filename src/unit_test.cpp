@@ -12,29 +12,29 @@
 #include "server.h"
 #include "stl.h"
 
-// TEST(HW3Test, TEST1) {
-//     Message msg;
-//     EXPECT_EQ(msg.get_type(), "");
-//     EXPECT_EQ(msg.get_sender(), "");
-//     EXPECT_EQ(msg.get_receiver(), "");
+TEST(HW3Test, TEST1) {
+    Message msg;
+    EXPECT_EQ(msg.get_type(), "");
+    EXPECT_EQ(msg.get_sender(), "");
+    EXPECT_EQ(msg.get_receiver(), "");
 
-//     std::time_t now = std::time(0);
-//     std::string time = std::ctime(&now);
-//     time.erase(time.find_last_not_of(" \n\r\t")+1); //trim the string
-//     EXPECT_EQ(msg.get_time(), time);
-// }
+    std::time_t now = std::time(0);
+    std::string time = std::ctime(&now);
+    time.erase(time.find_last_not_of(" \n\r\t")+1); //trim the string
+    EXPECT_EQ(msg.get_time(), time);
+}
 
-// TEST(HW3Test, TEST2) {
-//     Message msg{"text", "david", "jenifer"};
-//     EXPECT_EQ(msg.get_type(), "text");
-//     EXPECT_EQ(msg.get_sender(), "david");
-//     EXPECT_EQ(msg.get_receiver(), "jenifer");
+TEST(HW3Test, TEST2) {
+    Message msg{"text", "david", "jenifer"};
+    EXPECT_EQ(msg.get_type(), "text");
+    EXPECT_EQ(msg.get_sender(), "david");
+    EXPECT_EQ(msg.get_receiver(), "jenifer");
 
-//     std::time_t now = std::time(0);
-//     std::string time = std::ctime(&now);
-//     time.erase(time.find_last_not_of(" \n\r\t")+1); //trim the string
-//     EXPECT_EQ(msg.get_time(), time);
-// }
+    std::time_t now = std::time(0);
+    std::string time = std::ctime(&now);
+    time.erase(time.find_last_not_of(" \n\r\t")+1); //trim the string
+    EXPECT_EQ(msg.get_time(), time);
+}
 
 // TEST(HW3Test, TEST3) {
 //     Message msg{"text", "david", "jenifer"};

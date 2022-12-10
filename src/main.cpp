@@ -1,5 +1,6 @@
 #include <iostream>
 #include <gtest/gtest.h>
+#include <ctime>
 #include "message.h"
 #include "user.h"
 #include "server.h"
@@ -11,7 +12,9 @@ int main(int argc, char **argv)
     if (false) // make false to run unit-tests
     {
         // debug section
-
+        std::time_t x;
+        time(&x);
+        std::cout << std::ctime(&x) << "Hello" << std::endl;
     }
     else
     {
