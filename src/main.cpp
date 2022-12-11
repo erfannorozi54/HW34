@@ -12,9 +12,8 @@ int main(int argc, char **argv)
     if (false) // make false to run unit-tests
     {
         // debug section
-        std::time_t x;
-        time(&x);
-        std::cout << std::ctime(&x) << "Hello" << std::endl;
+        Message msg("text","erfan","amin");
+        std::cout << msg <<std::endl;
     }
     else
     {
