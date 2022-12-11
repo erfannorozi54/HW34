@@ -88,44 +88,44 @@ TEST(HW3Test, TEST6) {
     EXPECT_TRUE(found != std::string::npos);
 }
 
-// TEST(HW3Test, TEST7) {
-//     VoiceMessage voicemsg{"david", "jenifer"};
-//     EXPECT_EQ(voicemsg.get_voice().size(), 5);
-//     EXPECT_EQ(voicemsg.get_type(), "voice");
-//     EXPECT_EQ(voicemsg.get_sender(), "david");
-//     EXPECT_EQ(voicemsg.get_receiver(), "jenifer");
+TEST(HW3Test, TEST7) {
+    VoiceMessage voicemsg{"david", "jenifer"};
+    EXPECT_EQ(voicemsg.get_voice().size(), 5);
+    EXPECT_EQ(voicemsg.get_type(), "voice");
+    EXPECT_EQ(voicemsg.get_sender(), "david");
+    EXPECT_EQ(voicemsg.get_receiver(), "jenifer");
 
-//     std::time_t now = std::time(0);
-//     std::string time = std::ctime(&now);
-//     time.erase(time.find_last_not_of(" \n\r\t")+1); //trim the string
-//     EXPECT_EQ(voicemsg.get_time(), time);
-// }
+    std::time_t now = std::time(0);
+    std::string time = std::ctime(&now);
+    time.erase(time.find_last_not_of(" \n\r\t")+1); //trim the string
+    EXPECT_EQ(voicemsg.get_time(), time);
+}
 
-// TEST(HW3Test, TEST8) {
-//     VoiceMessage voicemsg("david", "jenifer");
-//     std::cout << voicemsg;
+TEST(HW3Test, TEST8) {
+    VoiceMessage voicemsg("david", "jenifer");
+    std::cout << voicemsg;
 
-//     // check if the '<<' output contains important information
-//     std::stringstream ss;
-//     ss << voicemsg;
-//     int first_byte = static_cast<int>(voicemsg.get_voice()[0]);
-//     size_t found =  ss.str().find(std::to_string(first_byte));
-//     EXPECT_TRUE(found != std::string::npos);
-// }
+    // check if the '<<' output contains important information
+    std::stringstream ss;
+    ss << voicemsg;
+    int first_byte = static_cast<int>(voicemsg.get_voice()[0]);
+    size_t found =  ss.str().find(std::to_string(first_byte));
+    EXPECT_TRUE(found != std::string::npos);
+}
 
-// TEST(HW3Test, TEST9) {
-//     VoiceMessage voicemsg("david", "jenifer");
-//     Message* msg{&voicemsg};
-//     std::cout << *msg;
+TEST(HW3Test, TEST9) {
+    VoiceMessage voicemsg("david", "jenifer");
+    Message* msg{&voicemsg};
+    std::cout << *msg;
 
-//     // check if the '<<' output contains important information
-//     // by 'late binding' printing 'msg' must print the 'voicemsg' info
-//     std::stringstream ss;
-//     ss << *msg;
-//     int first_byte = static_cast<int>(voicemsg.get_voice()[0]);
-//     size_t found =  ss.str().find(std::to_string(first_byte));
-//     EXPECT_TRUE(found != std::string::npos);
-// }
+    // check if the '<<' output contains important information
+    // by 'late binding' printing 'msg' must print the 'voicemsg' info
+    std::stringstream ss;
+    ss << *msg;
+    int first_byte = static_cast<int>(voicemsg.get_voice()[0]);
+    size_t found =  ss.str().find(std::to_string(first_byte));
+    EXPECT_TRUE(found != std::string::npos);
+}
 
 // TEST(HW3Test, TEST10) {
 //     User user{"david", "", nullptr};

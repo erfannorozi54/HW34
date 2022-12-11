@@ -40,10 +40,11 @@ std::string Message::get_time() const
 void Message::print(std::ostream& os) const
 {
     os << "***************************";
-    os << "/n" << sender << " -> " << receiver;
-    os << "/n"
+    os << "\n"
+       << sender << " -> " << receiver;
+    os << "\n"
        << "message type: " << type;
-    os << "/n"
+    os << "\n"
        << "message time: " << time;
 }
 
@@ -57,9 +58,9 @@ void TextMessage::print(std::ostream& os) const
 {
     os << "***************************";
     os << "\n"
-       << sender << " -> " << receiver;
-    os << "\n message type: " << type;
-    os << "\n message time: " << time;
+       << this->get_sender() << " -> " << this->get_receiver();
+    os << "\n message type: " << this->get_type();
+    os << "\n message time: " << this->get_time();
     os << "\n text: " << text << "\n";
 }
 
@@ -67,3 +68,32 @@ std::string TextMessage::get_text()
 {
     return text;
 }
+
+VoiceMessage::VoiceMessage(std::string _sender, std::string _receiver)
+    : VoiceMessage::Message("voice", _sender, _receiver)
+{
+    voice.push_back('a' + static_cast<unsigned char>(rand() % 26));
+    voice.push_back('a' + static_cast<unsigned char>(rand() % 26));
+    voice.push_back('a' + static_cast<unsigned char>(rand() % 26));
+    voice.push_back('a' + static_cast<unsigned char>(rand() % 26));
+    voice.push_back('a' + static_cast<unsigned char>(rand() % 26));
+}
+
+void VoiceMessage::print(std::ostream& os) const
+{
+    os << "***************************";
+    os << "\n"
+       << this->get_sender() << " -> " << this->get_receiver();
+    os << "\n message type: " << this->get_type();
+    os << "\n message time: " << this->get_time();
+    os << "\n voice: " ;
+    for (auto x : voice)
+        os << static_cast<int>(x) << " ";
+    os << "\n";
+}
+
+std::vector<unsigned char> VoiceMessage::get_voice()
+{
+    return voice;
+}
+

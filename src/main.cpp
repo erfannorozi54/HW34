@@ -12,8 +12,12 @@ int main(int argc, char **argv)
     if (false) // make false to run unit-tests
     {
         // debug section
-        Message msg("text","erfan","amin");
-        std::cout << msg <<std::endl;
+        // Message y {"text","erfan","amin"};
+        // std::cout << y << std::endl;
+        // TextMessage x{"Hello!!","erfan","amin"};
+        // std::cout << x << std::endl;
+        // VoiceMessage msg{"erfan","amin"};
+        // std::cout << msg <<std::endl;
     }
     else
     {

@@ -1,6 +1,7 @@
 #ifndef MESSAGE_H
 #define MESSAGE_H
 #include <iostream>
+#include <vector>
 
 class Message {
 public:
@@ -31,10 +32,15 @@ public:
     std::string get_text();
 
 private:
-    std::string type;
-    std::string sender;
-    std::string receiver;
-    std::string time;
     std::string text;
+};
+
+class VoiceMessage : public Message {
+public:
+    VoiceMessage(std::string sender, std::string receiver);
+    void print(std::ostream&) const;
+    std::vector<unsigned char> get_voice();
+private:
+    std::vector<unsigned char> voice;
 };
 #endif // MESSAGE_H
