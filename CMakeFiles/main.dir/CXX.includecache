@@ -6,6 +6,32 @@
 
 #IncludeRegexTransform: 
 
+/usr/src/app/src/main.cpp
+iostream
+-
+gtest/gtest.h
+-
+ctime
+-
+message.h
+/usr/src/app/src/message.h
+user.h
+/usr/src/app/src/user.h
+server.h
+/usr/src/app/src/server.h
+stl.h
+/usr/src/app/src/stl.h
+
+/usr/src/app/src/message.cpp
+message.h
+/usr/src/app/src/message.h
+ctime
+-
+
+/usr/src/app/src/server.cpp
+server.h
+/usr/src/app/src/server.h
+
 /usr/src/app/src/unit_test.cpp
 string
 -
@@ -34,6 +60,32 @@ server.h
 stl.h
 /usr/src/app/src/stl.h
 
+/usr/src/app/src/user.cpp
+user.h
+/usr/src/app/src/user.h
+
+include/crypto.h
+iostream
+-
+string.h
+-
+openssl/aes.h
+-
+openssl/evp.h
+-
+openssl/rsa.h
+-
+openssl/pem.h
+-
+openssl/ssl.h
+-
+openssl/bio.h
+-
+openssl/err.h
+-
+assert.h
+-
+
 include/message.h
 iostream
 -
@@ -41,8 +93,28 @@ vector
 -
 
 include/server.h
+crypto.h
+include/crypto.h
+message.h
+include/message.h
+user.h
+include/user.h
+exception
+-
+iostream
+-
+map
+-
+vector
+-
+algorithm
+-
 
 include/stl.h
 
 include/user.h
+server.h
+include/server.h
+iostream
+-
 

@@ -18,6 +18,21 @@ int main(int argc, char **argv)
         // std::cout << x << std::endl;
         // VoiceMessage msg{"erfan","amin"};
         // std::cout << msg <<std::endl;
+        // RSA* temp {crypto::createPrivateRSA("erfan")};
+        // srd::cout << temp << std::endl;
+        // Server server;
+        // User david = server.create_user("david");
+        // User jenifer = server.create_user("jenifer");
+        // std::cout << server.get_public_keys()["david"] << std::endl;
+        // bool result = david.send_text_message("hello jenifer", "jenifer");
+        // std::cout << result << std::endl;
+        // std::vector<int> x {2,3,1,2,3,1,1,45,6,4,3};
+        // std::vector<int>::iterator y{};
+        // y = std::find_if(x.begin(),x.end(),1);
+        // if (y == x.end())
+        //     std::cout << "Not found" << std::endl;
+        // else
+        //     std::cout << y - x.begin() << std::endl;
     }
     else
     {
@@ -30,4 +45,9 @@ int main(int argc, char **argv)
             std::cout << "FAILED" << std::endl;
     }
     return 0;
+}
+
+bool f(int& x){
+    
+    return true;
 }
