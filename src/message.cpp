@@ -45,7 +45,8 @@ void Message::print(std::ostream& os) const
     os << "\n"
        << "message type: " << type;
     os << "\n"
-       << "message time: " << time;
+       << "message time: " << time << "\n";
+    os << "***************************\n";
 }
 
 TextMessage::TextMessage(std::string _text, std::string _sender, std::string _receiver)
@@ -62,6 +63,7 @@ void TextMessage::print(std::ostream& os) const
     os << "\n message type: " << this->get_type();
     os << "\n message time: " << this->get_time();
     os << "\n text: " << text << "\n";
+    os << "***************************\n";
 }
 
 std::string TextMessage::get_text()
@@ -86,14 +88,14 @@ void VoiceMessage::print(std::ostream& os) const
        << this->get_sender() << " -> " << this->get_receiver();
     os << "\n message type: " << this->get_type();
     os << "\n message time: " << this->get_time();
-    os << "\n voice: " ;
+    os << "\n voice: ";
     for (auto x : voice)
         os << static_cast<int>(x) << " ";
     os << "\n";
+    os << "***************************\n";
 }
 
 std::vector<unsigned char> VoiceMessage::get_voice()
 {
     return voice;
 }
-

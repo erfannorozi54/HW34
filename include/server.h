@@ -3,11 +3,11 @@
 #include "crypto.h"
 #include "message.h"
 #include "user.h"
+#include <algorithm>
 #include <exception>
 #include <iostream>
 #include <map>
 #include <vector>
-#include <algorithm>
 class User;
 
 class Server {
@@ -21,7 +21,7 @@ public:
     std::vector<Message*> get_all_messages_from(std::string username);
     std::vector<Message*> get_all_messages_to(std::string username);
     std::vector<Message*> get_chat(std::string user1, std::string user2);
-    
+
 private:
     std::vector<User> users; // to store our users
     std::map<std::string, std::string> public_keys; // map usernames to their publickeys

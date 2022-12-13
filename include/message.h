@@ -17,8 +17,17 @@ public:
         c.print(os);
         return os;
     }
-    std::string virtual get_text(){std::string x;return x;};
-    std::vector<unsigned char> virtual get_voice(){std::vector<unsigned char> x ;return x;};
+    std::string virtual get_text()
+    {
+        std::string x;
+        return x;
+    };
+    std::vector<unsigned char> virtual get_voice()
+    {
+        std::vector<unsigned char> x;
+        return x;
+    };
+
 private:
     std::string type;
     std::string sender;
@@ -41,6 +50,7 @@ public:
     VoiceMessage(std::string sender, std::string receiver);
     void print(std::ostream&) const;
     std::vector<unsigned char> get_voice();
+
 private:
     std::vector<unsigned char> voice;
 };

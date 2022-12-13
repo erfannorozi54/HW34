@@ -1,13 +1,12 @@
-#include <iostream>
-#include <gtest/gtest.h>
-#include <ctime>
 #include "message.h"
-#include "user.h"
 #include "server.h"
 #include "stl.h"
+#include "user.h"
+#include <ctime>
+#include <gtest/gtest.h>
+#include <iostream>
 
-
-int main(int argc, char **argv)
+int main(int argc, char** argv)
 {
     if (false) // make false to run unit-tests
     {
@@ -33,12 +32,22 @@ int main(int argc, char **argv)
         //     std::cout << "Not found" << std::endl;
         // else
         //     std::cout << y - x.begin() << std::endl;
-    }
-    else
-    {
+        // std::vector<int> x (10);
+        // std::cout << x.size()<<std::endl;
+        // std::vector<int> x{};
+        // size_t size{4};
+        // initial_vector_with_3_mutiplies(x,size);
+        // initial_vector_with_3_mutiplies(x,)
+        // std::cout << x[2] << std::endl;
+        // std::vector<int> v{10,10,10,10,1,1,1};
+        // char ch {'.'};
+        // std::string s {};
+        // s = vector_to_string(v,ch);
+        // std::cout << s << std::endl;
+    } else {
         ::testing::InitGoogleTest(&argc, argv);
         std::cout << "RUNNING TESTS ..." << std::endl;
-        int ret{RUN_ALL_TESTS()};
+        int ret { RUN_ALL_TESTS() };
         if (!ret)
             std::cout << "<<<SUCCESS>>>" << std::endl;
         else
@@ -47,7 +56,8 @@ int main(int argc, char **argv)
     return 0;
 }
 
-bool f(int& x){
-    
+bool f(int& x)
+{
+
     return true;
 }

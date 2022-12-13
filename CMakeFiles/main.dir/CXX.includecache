@@ -7,30 +7,20 @@
 #IncludeRegexTransform: 
 
 /usr/src/app/src/main.cpp
-iostream
--
-gtest/gtest.h
--
-ctime
--
 message.h
 /usr/src/app/src/message.h
-user.h
-/usr/src/app/src/user.h
 server.h
 /usr/src/app/src/server.h
 stl.h
 /usr/src/app/src/stl.h
-
-/usr/src/app/src/message.cpp
-message.h
-/usr/src/app/src/message.h
+user.h
+/usr/src/app/src/user.h
 ctime
 -
-
-/usr/src/app/src/server.cpp
-server.h
-/usr/src/app/src/server.h
+gtest/gtest.h
+-
+iostream
+-
 
 /usr/src/app/src/unit_test.cpp
 string
@@ -59,10 +49,6 @@ server.h
 /usr/src/app/src/server.h
 stl.h
 /usr/src/app/src/stl.h
-
-/usr/src/app/src/user.cpp
-user.h
-/usr/src/app/src/user.h
 
 include/crypto.h
 iostream
@@ -99,6 +85,8 @@ message.h
 include/message.h
 user.h
 include/user.h
+algorithm
+-
 exception
 -
 iostream
@@ -107,10 +95,16 @@ map
 -
 vector
 -
-algorithm
--
 
 include/stl.h
+algorithm
+-
+iostream
+-
+numeric
+-
+vector
+-
 
 include/user.h
 server.h
